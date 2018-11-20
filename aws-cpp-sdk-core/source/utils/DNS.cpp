@@ -38,7 +38,7 @@ namespace Aws
             if (!isalnum(label.back()))
                 return false; // '-' is not acceptable as the last  character
 
-            for (int i = 1, e = label.size() - 1; i < e; ++i) {
+            for (size_t i = 1, e = label.size() - 1; i < e; ++i) {
                 auto c = label[i];
                 if (c != '-' && !isalnum(c))
                     return false;
